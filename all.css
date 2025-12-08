@@ -21,9 +21,6 @@ nav{
   margin-left:5px;
 }
 
-nav > .nav_li + .nav_li{
-  border-left:1px solid #ccc;
-}
 
 
 header{
@@ -33,7 +30,6 @@ header{
   background-image:url(Images/header_background.png);
   background-repeat:no-repeat;
   background-size:cover;
-  background-position:center;
 }
 h1{
   font-family:sans-serif;
