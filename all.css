@@ -18,7 +18,11 @@ nav{
 }
 .nav_li{
   display:inline-block;
-  margin-right:10px;
+}
+
+.nav_li + .nav_li{
+  border-left:1px solid #ccc;
+  margin-left: -1px;
 }
 
 
