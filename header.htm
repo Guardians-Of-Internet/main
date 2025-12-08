@@ -10,6 +10,31 @@
         color:white;
         text-decoration:none;
       }
+      p{
+        color:gray;
+        font-family:sans-serif;
+      }
+
+      ul {
+          list-style-type: none; /* リストの黒丸を削除 */
+          padding: 0;            /* デフォルトのパディングを削除 */
+          margin: 0;
+          display: flex;         /* 子要素 (li) を横並びにする */
+          justify-content: center; /* リンクを中央揃えにする場合 */
+          gap: 20px;             /* リンク間のスペース */
+      }
+      
+      li a {
+          text-decoration: none; /* リンクの下線を削除 */
+          color: #333;           /* リンクの色 */
+      }
+      
+      /* ホバー時のスタイル */
+      li a:hover {
+        text-decoration: underline;
+        color:white;
+      }
+
     </style>
   </head>
 
