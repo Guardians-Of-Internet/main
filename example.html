@@ -6,10 +6,13 @@
     <title>example form</title>
   </head>
   <body>
-    <form action="mailto:r25347sh@hs.reitaku.jp" method="POST" enctype="text/plain">
-      <input type="text" name="お名前" placeholder="お名前">
-      <textarea name="メッセージ"></textarea>
-      <input type="submit" value="メールで送信">
-    </form>
+    <form action="mail_script.php" method="POST">
+  <input type="hidden" name="to" value="あなたのメールアドレス@example.com">
+  <input type="hidden" name="subject" value="お問い合わせフォームからのメール">
+  <input type="text" name="name" placeholder="お名前">
+  <textarea name="message"></textarea>
+  <input type="submit" value="送信">
+</form>
+
   </body>
 </html>
