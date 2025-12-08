@@ -1,0 +1,17 @@
+body{
+  font-family:fantasy;
+}
+nav{
+  background-color:black;
+  color:white;
+  padding-bottom:3px;
+}
+
+header{
+  background-color:white;
+}
+h1{
+  font-family:sans-serif;
+  background-color:black;
+  color:white;
+}
