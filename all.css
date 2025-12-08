@@ -30,10 +30,10 @@ header{
   background-color:white;
   height:500px;
   text-align:center;
-  background-image:url(Images/丸カットアイコン.png),url(Images/header_background.png);
-  background-repeat:no-repeat,no-repeat;
-  background-size:75px,cover;
-  background-position:center 100px,center;
+  background-image:url(Images/header_background.png);
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
 }
 h1{
   font-family:sans-serif;
