@@ -13,6 +13,13 @@ nav{
   color:white;
   text-decoration:none;
 }
+.nav_ul{
+  list-style:none;
+}
+.nav_li{
+  display:inline-block;
+  margin-right:10px;
+}
 
 
 header{
