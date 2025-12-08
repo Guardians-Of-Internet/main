@@ -2,7 +2,7 @@ body{
   font-family:serif;
 }
 nav{
-  background-color:black;
+  background-color:#050b1b;
   color:white;
   padding-bottom:3px;
   position:sticky;
@@ -33,7 +33,7 @@ header{
 }
 h1{
   font-family:sans-serif;
-  background-color:black;
+  background-color:#050b1b;
   color:white;
   margin-top:200px;
   margin-left:auto;
@@ -51,7 +51,7 @@ h2{
   font-family:sans-serif;
   padding-left:3px;
   padding-bottom:2px;
-  border-bottom:black solid 2px;
+  border-bottom:#050b1b solid 2px;
   border-left:solid yellow 5px;
 }
 h3{
