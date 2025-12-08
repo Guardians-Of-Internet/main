@@ -2,7 +2,7 @@ body{
   font-family:serif;
   background:linear-gradient(to bottom,#223452,#966d03);
 }
-body:not(details){
+body:not(section){
   color:white;
 }
 
@@ -106,5 +106,6 @@ details > * {
 section{
   background-color:white;
   padding:20px;
-  border-radius:25;
+  border-radius:25px;
+  margin:30px;
 }
