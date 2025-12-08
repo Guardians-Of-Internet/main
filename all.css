@@ -33,7 +33,7 @@ header{
   background-image:url(Images/丸カットアイコン.png),url(Images/header_background.png);
   background-repeat:no-repeat,no-repeat;
   background-size:75px,cover;
-  background-position:centor 100px,centor;
+  background-position:center 100px,center;
 }
 h1{
   font-family:sans-serif;
