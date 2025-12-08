@@ -49,6 +49,8 @@ h3{
   padding-bottom:1.5px;
   border-left:green solid 3px;
   border-bottom:solid blue 2px;
+  padding-right:5px;
+  width:fit-content;
 }
 
 
