@@ -1,5 +1,5 @@
 body{
-  font-family:fantasy;
+  font-family:serif;
 }
 nav{
   background-color:black;
@@ -22,4 +22,14 @@ h1{
 .header_p{
   color:gray;
   margin:0 auto;
+}
+
+
+/* ここより、h2,h3 */
+h2{
+  font-family:sans-serif;
+  padding-left:2px;
+  padding-bottom:1px;
+  border-bottom:black solid 1px;
+  border-left:solid yellow 3px;
 }
