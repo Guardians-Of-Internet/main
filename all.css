@@ -1,5 +1,6 @@
 body{
   font-family:serif;
+  background:linear-gradient(to bottom,#223452,#966d03);
 }
 nav{
   background-color:#050b1b;
@@ -24,7 +25,6 @@ nav{
 
 
 header{
-  background:linear-gradient(to bottom,#223452,#d19806);
   margin-top:0;
   height:500px;
   text-align:center;
