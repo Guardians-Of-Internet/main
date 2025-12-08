@@ -95,8 +95,5 @@ details[open] summary {
 details > * {
   /* 詳細コンテンツのパディング */
   padding: 15px;
-}
-
-details > ul{
-  margin-left:25px;
+  padding-left:45px;
 }
