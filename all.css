@@ -24,9 +24,7 @@ nav{
 
 
 header{
-  background-image:url(Images/header_background.png);
-  background-repeat:no-repeat;
-  background-size:cover;
+  background:linear-gradient(to bottom,#223452,#d19806);
   margin-top:0;
   height:500px;
   text-align:center;
