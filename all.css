@@ -9,9 +9,16 @@ nav{
 
 header{
   background-color:white;
+  text-align:center;
+  height:500px;
 }
 h1{
   font-family:sans-serif;
   background-color:black;
   color:white;
+  width:fit-content;
+  padding:15px;
+}
+.header_p{
+  color:gray;
 }
