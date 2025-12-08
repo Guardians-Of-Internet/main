@@ -5,7 +5,15 @@ nav{
   background-color:black;
   color:white;
   padding-bottom:3px;
+  position:sticky;
+  z-index:999;
+  top:0;
 }
+.nav_a{
+  color:white;
+  text-decoration:none;
+}
+
 
 header{
   background-color:white;
