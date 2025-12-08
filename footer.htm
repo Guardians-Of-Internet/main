@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0">
+    <style>
+      body{
+        background-color:black;
+        text-align:center;
+      }
+      p{
+        color:gray;
+        font-family:sans-serif;
+      }
+
+      footer ul {
+          list-style-type: none; /* リストの黒丸を削除 */
+          padding: 0;            /* デフォルトのパディングを削除 */
+          margin: 0;
+          display: flex;         /* 子要素 (li) を横並びにする */
+          justify-content: center; /* リンクを中央揃えにする場合 */
+          gap: 20px;             /* リンク間のスペース */
+      }
+      
+      footer li a {
+          text-decoration: none; /* リンクの下線を削除 */
+          color: #333;           /* リンクの色 */
+      }
+      
+      /* ホバー時のスタイル */
+      footer li a:hover {
+          text-decoration: underline;
+      }
+
+    </style>
+  </head>
+  <body>
+    <p>© 2025 Guardians Of Internet</p>
+    <nav aria-label="フッターナビゲーション">
+        <ul>
+            <li><a href="main.html">Home</a></li>
+            <li><a href="Concults/consults.htm">お問い合わせトップ</a></li>
+            <li><a href="privacy/privacy.htm">プライバシーポリシー</a></li>
+            <li><a href="privacy/terms.htm">利用規約</a></li>
+        </ul>
+    </nav>
+
+  </body>
+</html>
