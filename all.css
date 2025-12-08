@@ -69,3 +69,30 @@ h3{
 section{
   padding:50px;
 }
+
+/* details , summary */
+details {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 軽い影をつける */
+  border-radius: 8px;
+  overflow: hidden; /* 角丸からはみ出さないように */
+  margin-bottom: 15px;
+  background-color: white;
+}
+
+summary {
+  padding: 12px 15px;
+  background-color: #f0f0f0; /* 見出しの背景色 */
+  cursor: pointer;
+  font-size: 1.1em;
+  border-bottom: 1px solid #ddd; /* 下線 */
+}
+
+details[open] summary {
+  /* 開いている時の見出しのスタイル変更 */
+  background-color: #e8e8e8;
+}
+
+details > * {
+  /* 詳細コンテンツのパディング */
+  padding: 15px;
+}
