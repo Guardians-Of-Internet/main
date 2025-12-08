@@ -43,3 +43,16 @@ h2{
   border-bottom:black solid 2px;
   border-left:solid yellow 5px;
 }
+h3{
+  font-family:sans-serif;
+  padding-left:2.5px;
+  padding-bottom:1.5px;
+  border-left:green solid 3px;
+  border-bottom:solid blue 2px;
+}
+
+
+/* ここより、各セクションの基本設定 */
+section{
+  padding:50px;
+}
