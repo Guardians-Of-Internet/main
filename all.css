@@ -97,3 +97,11 @@ details > * {
   padding: 15px;
   padding-left:45px;
 }
+
+
+/* ここからはsectionの基本設定 */
+section{
+  background-color:white;
+  padding:20px;
+  border-radius:25;
+}
