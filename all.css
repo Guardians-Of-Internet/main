@@ -10,6 +10,7 @@ nav{
 header{
   background-color:white;
   height:500px;
+  text-align:center;
 }
 h1{
   font-family:sans-serif;
@@ -21,7 +22,6 @@ h1{
 }
 .header_p{
   color:gray;
-  margin:0 auto;
 }
 
 
