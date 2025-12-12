@@ -15,11 +15,11 @@
 @keyframes firstbody{
   from{
     overflow:hidden;
-    opacity:0;
+    display:none;
   }
   to{
     overflow:visible;
-    opacity:1;
+    display:block;
   }
 }
 
