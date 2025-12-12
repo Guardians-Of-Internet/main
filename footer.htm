@@ -1,40 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <title>Footer — Guardians Of Internet</title>
     <style>
+      :root{
+        --color-primary: #0b2a4a;
+        --color-inverse-text: #ffffff;
+        --color-accent-strong: #ffb84d;
+      }
+      html,body{ margin:0; padding:0; }
       body{
-        background-color:#050b1b;
+        background-color: var(--color-primary);
         text-align:center;
-        color:white;
-        text-decoration:none;
+        color: var(--color-inverse-text);
+        font-family: system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+        padding: 12px 8px;
       }
-      p{
-        color:gray;
-        font-family:sans-serif;
+      p{ color: #cfcfcf; margin: 6px 0 10px 0; font-size: 0.95rem; }
+      nav[aria-label] ul {
+          list-style-type: none;
+          padding: 0;
+          margin: 8px 0 0 0;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 18px;
       }
-
-      ul {
-          list-style-type: none; /* リストの黒丸を削除 */
-          padding: 0;            /* デフォルトのパディングを削除 */
-          margin: 0;
-          display: flex;         /* 子要素 (li) を横並びにする */
-          justify-content: center; /* リンクを中央揃えにする場合 */
-          gap: 20px;             /* リンク間のスペース */
-      }
-      
       li a {
-          text-decoration: none; /* リンクの下線を削除 */
-          color: #333;           /* リンクの色 */
+          text-decoration: none;
+          color: var(--color-inverse-text);
+          padding: 6px 8px;
+          border-radius: 6px;
       }
-      
-      /* ホバー時のスタイル */
-      li a:hover {
+      li a:hover, li a:focus {
+        color: var(--color-accent-strong);
         text-decoration: underline;
-        color:white;
+        outline: none;
       }
-
+      @media (max-width: 480px){
+        nav[aria-label] ul{ flex-direction: column; gap: 8px; }
+      }
     </style>
   </head>
   <body>
@@ -42,11 +49,10 @@
     <nav aria-label="フッターナビゲーション">
         <ul>
             <li><a target="_top" href="main.html">Home</a></li>
-            <li><a target="_top" href="Consults/consults.htm">お問い合わせトップ</a></li>
+            <li><a target="_top" href="Consults/consults.htm">お問い合わせ</a></li>
             <li><a target="_top" href="privacy/privacy.htm">プライバシーポリシー</a></li>
             <li><a target="_top" href="privacy/terms.htm">利用規約</a></li>
         </ul>
     </nav>
-
   </body>
 </html>
