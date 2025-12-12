@@ -54,70 +54,14 @@
           <h3>実績</h3>
           <div class="miniblock">
             <h4>PCで困ったら、<span onclick="miniblockOneClick(this)">ヤツ</span>のもとへ⋯⋯！</h4>
-            <p><span class="miniblock_span">Aさんより</span><br>学校支給のPCが動かなくなったときや、印刷・スクリーン接続といった操作がわからないとき、<button onclick="miniblockTwoClick('thisis')" class="miniblockTwoClock">⋯</button><span id="thisis"></span><span onclick="miniblockOneClick(this)">ヤツ</span>に頼んでました。</p>
+            <p><span class="miniblock_span">Aさんより</span><br>学校支給のPCが動かなくなったときや、印刷・スクリーン接続といった操作がわからないとき、<span onclick="miniblockOneClick(this)">ヤツ</span>に頼んでました。</p>
+            <p>相談から実行まで、スムーズにやっていただきました。</p>
             <script>
-              // miniblock のクリック処理を改善：
-              // - 元のテキストを保持してトグル可能に
-              // - アクセシビリティのため role/tabindex を考慮
-              function miniblockOneClick(element) {
-                // 保存されていなければオリジナルの内容を保存
-                if (!element.dataset.original) {
-                  element.dataset.original = element.innerHTML;
-                }
-
-                const isActive = element.dataset.active === '1';
-
-                if (!isActive) {
-                  element.dataset.active = '1';
-                  element.innerHTML = '　インターネットの番人　';
-                  element.style.color = '#ffffff';
-                  element.style.backgroundColor = '#1A73E8';
-                  element.style.fontSize = 'larger';
-                  element.style.padding = '5px';
-                  element.style.borderRadius = '4px';
-                  element.style.transition = 'background-color 200ms, color 200ms, transform 200ms';
-                  element.style.cursor = 'pointer';
-                } else {
-                  // 元に戻す
-                  element.dataset.active = '0';
-                  element.innerHTML = element.dataset.original;
-                  element.style.color = '';
-                  element.style.backgroundColor = '';
-                  element.style.fontSize = '';
-                  element.style.padding = '';
-                  element.style.borderRadius = '';
-                  element.style.transition = '';
-                  element.style.cursor = '';
-                }
+              function miniblockOneClick(element){
+                element.innerHTML = ' インターネットの番人 ';
+                element.style.Color = '#00ae95';
+                element.style.backgroundColor = '#3d00ae';
               }
-
-              // 「もっと見る」ボタンのクリックで別メッセージを表示（任意）
-              function miniblockTwoClick(buttonElement) {
-                const parent = buttonElement.closest('.miniblock');
-                if (!parent) return;
-                const msg = parent.querySelector('.miniblock-span');
-                if (!msg) return;
-
-                // トグルでメッセージを切り替える
-                if (msg.dataset.toggled === '1') {
-                  msg.dataset.toggled = '0';
-                  msg.textContent = 'Aさんより';
-                } else {
-                  msg.dataset.toggled = '1';
-                  msg.textContent = 'Aさんより — 問い合わせから解決まで迅速に対応してもらえました。';
-                }
-              }
-
-              // キーボードで Enter/Space にも反応させる（span をボタンのように使うため）
-              document.addEventListener('keydown', function (e) {
-                const active = document.activeElement;
-                if (active && active.getAttribute && active.getAttribute('role') === 'button') {
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    active.click();
-                  }
-                }
-              });
             </script>
           </div>
         </div>
