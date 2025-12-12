@@ -1,50 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <title>Header — Guardians Of Internet</title>
     <style>
+      :root{
+        --color-primary: #0b2a4a;
+        --color-inverse-text: #ffffff;
+        --color-accent-strong: #ffb84d;
+        --gap: 16px;
+      }
+      html,body{ margin:0; padding:0; }
       body{
-        background-color:#050b1b;
-        text-align:center;
-        color:white;
-        text-decoration:none;
+        background-color: var(--color-primary);
+        text-align: center;
+        color: var(--color-inverse-text);
+        font-family: system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
       }
-      p{
-        color:gray;
-        font-family:sans-serif;
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 12px;
       }
-
+      .brand img{
+        display: block;
+        width: 45px;
+        height: 45px;
+        object-fit: contain;
+      }
+      nav[role="navigation"]{
+        margin-top: 4px;
+      }
       ul {
-          list-style-type: none; /* リストの黒丸を削除 */
-          padding: 0;            /* デフォルトのパディングを削除 */
-          margin: 0;
-          display: flex;         /* 子要素 (li) を横並びにする */
-          justify-content: center; /* リンクを中央揃えにする場合 */
-          gap: 20px;             /* リンク間のスペース */
+          list-style-type: none;
+          padding: 0;
+          margin: 8px 0 12px 0;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 18px;
       }
-      
       li a {
-          text-decoration: none; /* リンクの下線を削除 */
-          color: #333;           /* リンクの色 */
-      }
-      
-      /* ホバー時のスタイル */
-      li a:hover {
+          text-decoration: none;
+          color: var(--color-inverse-text);
+          padding: 6px 8px;
+          border-radius: 6px;
+        }
+      li a:hover, li a:focus {
         text-decoration: underline;
-        color:white;
+        color: var(--color-accent-strong);
+        outline: none;
+        background: rgba(255,255,255,0.03);
       }
-
+      /* 小さな画面では縦並びに */
+      @media (max-width: 480px){
+        ul{ flex-direction: column; gap: 8px; }
+      }
     </style>
   </head>
 
   <body>
-    <a target="_top" href="main.html"><img src="Images/Guardian_of_internet_Icon.png" height="45px" width="45px"></a>
-    <ul>
-      <li><a target="_top" href="main.html">Home</a></li>
-      <li><a target="_top" href="Consults/consults.htm">お問い合わせトップ</a></li>
-      <li><a target="_top" href="privacy/privacy.htm">プライバシーポリシー</a></li>
-      <li><a target="_top" href="privacy/terms.htm">利用規約</a></li>
-    </ul>
+    <a class="brand" target="_top" href="main.html" aria-label="Guardians Of Internet ホームへ">
+      <img src="Images/Guardian_of_internet_Icon.png" alt="Guardians Of Internet ロゴ">
+      <span class="hidden-visually">Guardians Of Internet</span>
+    </a>
+
+    <nav role="navigation" aria-label="ヘッダー ナビゲーション">
+      <ul>
+        <li><a target="_top" href="main.html" aria-current="page">Home</a></li>
+        <li><a target="_top" href="Consults/consults.htm">お問い合わせ</a></li>
+        <li><a target="_top" href="privacy/privacy.htm">プライバシーポリシー</a></li>
+        <li><a target="_top" href="privacy/terms.htm">利用規約</a></li>
+      </ul>
+    </nav>
   </body>
 </html>
