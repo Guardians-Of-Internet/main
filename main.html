@@ -81,6 +81,17 @@
         </div>
       </section>
     </main>
+    
+    <script>
+      (function(){
+        const img = document.querySelector('.thisisafirstimage');
+        if (!img) return;
+        // アニメ終了後に要素を完全に取り除く（不要なら display:none にしても可）
+        img.addEventListener('animationend', () => {
+          img.remove();
+        }, { once: true });
+      })();
+    </script>
 
     <footer>
       <iframe src="footer.htm" width="100%" height="auto" frameborder="0"></iframe>
