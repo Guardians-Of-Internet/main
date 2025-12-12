@@ -1,0 +1,42 @@
+@keyframes thisisafirstimage{
+  from{
+    display:block;
+    opacity:1;
+    overflow:hidden;
+    z-index:999;
+  }
+  to{
+    opacity:0;
+    overflow:visible;
+    z-index:0;
+    display:none;
+  }
+}
+@keyframes firstbody{
+  from{
+    overflow:hidden;
+  }
+  to{
+    overflow:visible;
+  }
+}
+
+.miniblock{
+  margin-left:15px;
+  background-color:#f8eacf;
+  border-radius:10px;
+}
+
+.thisisafirstimage{
+  width:100vw;
+  height:100vw;
+  animation:thisisafirstimage 2.5s;
+}
+
+body{
+  animation:firstbody 2.5s;
+}
+
+nav{
+  z-index:998;
+}
