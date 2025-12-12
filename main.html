@@ -2,14 +2,15 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <link rel="stylesheet" href="all.css">
     <link rel="stylesheet" href="mainonly.css">
     <link rel="icon" href="Images/丸カットアイコン.png">
     <title>Home ｜ Guardians Of Internet</title>
   </head>
   <body>
-    <iframe src="header.htm" width="100%" height="auto" frameborder="0" style="margin-bottom:0;"></iframe>
+    <iframe src="header.htm" style="width:100%;border:0;margin-bottom:0;"></iframe>
+
     <nav>
       <ul class="nav_ul">
         <li class="nav_li"><a class="nav_a" href="#top">Top</a></li>
@@ -37,7 +38,7 @@
             <h4>PCで困ったら<span onclick="miniblockOneClick(this)">ヤツ</span>のもとへ⋯⋯！</h4>
             <script>
               function miniblockOneClick(element){
-                element.innerHTML = '　インタネットの番人　';
+                element.innerHTML = '　インターネットの番人　';
                 element.style.color = 'blue';
                 element.style.backgroundColor = 'red';
                 element.style.fontSize = 'larger';
@@ -47,16 +48,13 @@
           </div>
         </div>
       </section>
-
-      <br>
       
       <section class="intro" id="intro">
         <h2>Self-introduction</h2>
         <div class="overviews">
           <h3>概要</h3>
-          <p>Name : インターネットの番人<span style="font-size:8.5px">(Guardians Of Internet)</span></p>
-          <p>インターネット上のトラブルや疑問、プログラミングのレッスンなどインターネットに関する様々なサービスを提供します<span style="color:white;">？</span></p>
-          <br>
+          <p>Name : インターネットの番人 <span style="font-size:8.5px">(Guardians Of Internet)</span></p>
+          <p>インターネット上のトラブルや疑問、プログラミングのレッスンなどインターネットに関する様々なサービスを提供します。</p>
           <h3>主なサービス</h3>
           <ul>
             <li>インターネット上における誹謗中傷・著作権侵害・プライバシー権の損害などの相談</li>
@@ -66,8 +64,6 @@
           </ul>
         </div>
       </section>
-
-      <br>
       
       <section class="pages" id="pages">
         <h2>Pages</h2>
@@ -86,7 +82,7 @@
       (function(){
         const img = document.querySelector('.thisisafirstimage');
         if (!img) return;
-        // アニメ終了後に要素を完全に取り除く（不要なら display:none にしても可）
+        // アニメ終了後に要素を完全に取り除く
         img.addEventListener('animationend', () => {
           img.remove();
         }, { once: true });
@@ -94,7 +90,7 @@
     </script>
 
     <footer>
-      <iframe src="footer.htm" width="100%" height="auto" frameborder="0"></iframe>
+      <iframe src="footer.htm" style="width:100%;border:0;"></iframe>
     </footer>
   </body>
 </html>
