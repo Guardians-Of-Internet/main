@@ -1,5 +1,4 @@
 :root{
-  /* カラーパレット（変更はここだけで済む） */
   --color-bg-deep: #223452;
   --color-bg-warm: #966d03;
   --color-primary: #0b2a4a;
@@ -18,8 +17,8 @@
 }
 
 /* ベース */
-*{box-sizing: border-box;}
-html,body{height:100%;}
+* { box-sizing: border-box; }
+html, body { height: 100%; }
 body{
   margin: 0;
   font-family: serif;
@@ -31,7 +30,7 @@ body{
 nav{
   background: var(--color-primary);
   color: var(--color-inverse-text);
-  padding-bottom:3px;
+  padding: 8px 12px;
   position: sticky;
   z-index: 999;
   top: 0;
@@ -48,13 +47,14 @@ nav{
 .nav_ul{
   list-style: none;
   margin: 0;
-  padding: 8px 12px;
+  padding: 0;
   display: flex;
   align-items: center;
+  gap: 16px;
+  justify-content: center;
 }
 .nav_li{
   display: inline-block;
-  margin-left: 15px;
 }
 
 /* ヘッダー / 大見出し */
@@ -68,18 +68,20 @@ h1{
   background-color: var(--color-primary);
   color: var(--color-inverse-text);
   margin-top: 200px;
-  margin-left: auto;
-  margin-right: auto;
   padding: 15px;
   width: fit-content;
   border-radius: var(--radius-md);
 }
 .header_p{
-  color: var(--color-muted);
-  background-color: rgba(255,255,255,0.06);
+  /* 視認性を改善：背景をやや濃く、文字を白寄りに */
+  color: var(--color-inverse-text);
+  background-color: rgba(255,255,255,0.08);
   display: inline-block;
-  padding: 6px 8px;
-  border-radius: 6px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  margin-top: 8px;
+  font-family: system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  font-size: 0.95rem;
 }
 
 /* 見出しのスタイル */
@@ -128,7 +130,7 @@ details > * {
   padding-left: 45px;
 }
 
-/* セクション（重複を統合） */
+/* セクション */
 section{
   background-color: var(--color-surface);
   padding: 20px;
@@ -141,24 +143,17 @@ section{
 .miniblock{
   margin-left: 15px;
   padding: 15px;
-  background-color: #fff8e6; /* アクセントの淡い版 */
+  background-color: #fff8e6;
   border-radius: 10px;
   border-left: 4px solid var(--color-accent);
 }
 
-/* リンクとボタンの基本 */
-a {
-  color: var(--color-accent);
-}
-a:hover, a:focus {
-  color: var(--color-accent-strong);
-  outline: none;
-}
-button, .btn {
-  font: inherit;
-}
+/* リンクとボタン */
+a { color: var(--color-accent); }
+a:hover, a:focus { color: var(--color-accent-strong); outline: none; }
+button, .btn { font: inherit; }
 
-/* ユーティリティ等 */
+/* ユーティリティ */
 .hidden-visually{
   position: absolute !important;
   height: 1px; width: 1px;
@@ -167,20 +162,15 @@ button, .btn {
   white-space: nowrap;
 }
 
-/* ナビの z-index（mainonly.css と競合しないよう余裕を持たせる） */
-nav{
-  z-index: 998;
-}
-
 /* フォーカスの視認性向上 */
 :focus{
   outline: 3px solid rgba(197,154,0,0.25);
   outline-offset: 2px;
 }
 
-/* small screens での調整（例） */
+/* small screens での調整 */
 @media (max-width: 600px){
-  .nav_ul{ padding: 10px; }
+  .nav_ul{ flex-direction: column; gap: 8px; padding: 8px 0; }
   h1{ margin-top: 120px; font-size: 1.6rem; padding: 12px; }
   section{ margin: 16px; padding: 16px; }
 }
