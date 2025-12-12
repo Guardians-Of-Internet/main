@@ -32,11 +32,12 @@
 .thisisafirstimage{
   width:100vw;
   height:100vw;
-  animation:thisisafirstimage 2.5s;
+  animation:thisisafirstimage 5s;
+  display:none;
 }
 
 body:not(.thisisafirstimage){
-  animation:firstbody 2.5s;
+  animation:firstbody 5s;
 }
 
 nav{
