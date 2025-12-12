@@ -1,14 +1,14 @@
 .thisisafirstimage{
   position: fixed;
-  inset: 0; /* top:0; right:0; bottom:0; left:0; と同じ */
+  inset: 0;
   width: 100vw;
   height: 100vh;
-  object-fit: cover; /* 画像を画面いっぱいに覆う */
-  z-index: 99999; /* 他より上に表示 */
-  display: block; /* ここを none にしてはいけない */
+  object-fit: cover;
+  z-index: 99999;
+  display: block;
   animation: introFade 4s ease forwards;
   will-change: opacity, transform;
-  pointer-events: none; /* 画像がページ操作を邪魔しないようにする（必要なら削除） */
+  pointer-events: none;
 }
 
 /* フェードアウト＋少し拡大する例 */
@@ -24,7 +24,6 @@
   100% {
     opacity: 0;
     transform: scale(1.05);
-    /* visibility はアニメーションできないが、最終状態として無視でOK（opacity:0 で見えなくなる） */
   }
 }
 
@@ -33,15 +32,6 @@
   padding:15px;
   background-color:#f8eacf;
   border-radius:10px;
-}
-
-.thisisafirstimage{
-  animation:5s thisisafirstimage;
-  display:none;
-}
-
-body:not(.thisisafirstimage){
-  animation:5s firstbody;
 }
 
 nav{
