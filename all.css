@@ -1,99 +1,186 @@
-body{
-  font-family: serif;
-  background: linear-gradient(to bottom, #223452, #966d03), rgba(255,255,255,0.3);
-  margin: 0;
+:root{
+  /* カラーパレット（変更はここだけで済む） */
+  --color-bg-deep: #223452;
+  --color-bg-warm: #966d03;
+  --color-primary: #0b2a4a;
+  --color-accent: #c59a00;
+  --color-accent-strong: #ffb84d;
+  --color-surface: #ffffff;
+  --color-muted: #6b7280;
+  --color-text: #0f1724;
+  --color-inverse-text: #ffffff;
+  --color-success: #2d9f7a;
+  --color-danger: #d9534f;
+
+  --radius-lg: 16px;
+  --radius-md: 8px;
+  --gap: 16px;
 }
 
+/* ベース */
+*{box-sizing: border-box;}
+html,body{height:100%;}
+body{
+  margin: 0;
+  font-family: serif;
+  color: var(--color-text);
+  background: linear-gradient(to bottom, var(--color-bg-deep), var(--color-bg-warm)), rgba(255,255,255,0.3);
+}
+
+/* ナビ */
 nav{
-  background-color:#050b1b;
-  color:white;
+  background: var(--color-primary);
+  color: var(--color-inverse-text);
   padding-bottom:3px;
-  position:sticky;
-  z-index:999;
-  top:0;
+  position: sticky;
+  z-index: 999;
+  top: 0;
 }
 .nav_a{
-  color:white;
-  text-decoration:none;
+  color: var(--color-inverse-text);
+  text-decoration: none;
+}
+.nav_a:hover,
+.nav_a:focus{
+  color: var(--color-accent-strong);
+  outline: none;
 }
 .nav_ul{
-  list-style:none;
+  list-style: none;
   margin: 0;
   padding: 8px 12px;
+  display: flex;
+  align-items: center;
 }
 .nav_li{
-  display:inline-block;
-  margin-left:15px;
+  display: inline-block;
+  margin-left: 15px;
 }
 
+/* ヘッダー / 大見出し */
 header{
-  margin-top:0;
-  height:500px;
-  text-align:center;
+  margin-top: 0;
+  height: 500px;
+  text-align: center;
 }
 h1{
   font-family: sans-serif;
-  background-color:#050b1b;
-  color:white;
-  margin-top:200px;
-  margin-left:auto;
-  margin-right:auto;
-  padding:15px;
-  width:fit-content;
+  background-color: var(--color-primary);
+  color: var(--color-inverse-text);
+  margin-top: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+  width: fit-content;
+  border-radius: var(--radius-md);
 }
 .header_p{
-  color:gray;
-  background-color: rgba(255,255,255,0.5);
+  color: var(--color-muted);
+  background-color: rgba(255,255,255,0.06);
+  display: inline-block;
+  padding: 6px 8px;
+  border-radius: 6px;
 }
 
-/* ここより、h2,h3 */
+/* 見出しのスタイル */
 h2{
-  font-family:sans-serif;
-  padding-left:3px;
-  padding-bottom:2px;
-  border-bottom:#050b1b solid 2px;
-  border-left:solid yellow 5px;
+  font-family: sans-serif;
+  padding-left: 3px;
+  padding-bottom: 2px;
+  border-bottom: #050b1b solid 2px;
+  border-left: solid var(--color-accent) 5px;
 }
 h3{
-  font-family:sans-serif;
-  padding-left:5px;
-  padding-bottom:1.5px;
-  border-left:green solid 3px;
-  border-bottom:solid blue 2px;
-  padding-right:5px;
-  width:fit-content;
+  font-family: sans-serif;
+  padding-left: 5px;
+  padding-bottom: 1.5px;
+  border-left: green solid 3px;
+  border-bottom: solid blue 2px;
+  padding-right: 5px;
+  width: fit-content;
 }
 
-/* details , summary */
+/* details / summary */
 details {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 15px;
-  background-color: white;
+  background-color: var(--color-surface);
+  border: 1px solid rgba(11,42,74,0.04);
 }
 
 summary {
   padding: 12px 15px;
-  background-color: #f0f0f0;
+  background-color: #f7f7f7;
   cursor: pointer;
   font-size: 1.1em;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #eee;
+  list-style: none;
 }
 
 details[open] summary {
-  background-color: #e8e8e8;
+  background-color: #efefef;
 }
 
 details > * {
   padding: 15px;
-  padding-left:45px;
+  padding-left: 45px;
 }
 
-/* section の基本設定（重複を統一） */
+/* セクション（重複を統合） */
 section{
-  background-color:white;
-  padding:20px;
-  border-radius:25px;
-  margin:30px;
+  background-color: var(--color-surface);
+  padding: 20px;
+  border-radius: 25px;
+  margin: 30px;
+  box-shadow: 0 6px 18px rgba(11,42,74,0.06);
+}
+
+/* ミニブロック */
+.miniblock{
+  margin-left: 15px;
+  padding: 15px;
+  background-color: #fff8e6; /* アクセントの淡い版 */
+  border-radius: 10px;
+  border-left: 4px solid var(--color-accent);
+}
+
+/* リンクとボタンの基本 */
+a {
+  color: var(--color-accent);
+}
+a:hover, a:focus {
+  color: var(--color-accent-strong);
+  outline: none;
+}
+button, .btn {
+  font: inherit;
+}
+
+/* ユーティリティ等 */
+.hidden-visually{
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+/* ナビの z-index（mainonly.css と競合しないよう余裕を持たせる） */
+nav{
+  z-index: 998;
+}
+
+/* フォーカスの視認性向上 */
+:focus{
+  outline: 3px solid rgba(197,154,0,0.25);
+  outline-offset: 2px;
+}
+
+/* small screens での調整（例） */
+@media (max-width: 600px){
+  .nav_ul{ padding: 10px; }
+  h1{ margin-top: 120px; font-size: 1.6rem; padding: 12px; }
+  section{ margin: 16px; padding: 16px; }
 }
