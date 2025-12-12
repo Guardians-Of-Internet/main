@@ -71,6 +71,8 @@ h1{
   padding: 15px;
   width: fit-content;
   border-radius: var(--radius-md);
+  margin-left:auto;
+  margin-right:auto;
 }
 .header_p{
   /* 視認性を改善：背景をやや濃く、文字を白寄りに */
