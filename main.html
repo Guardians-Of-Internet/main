@@ -85,10 +85,39 @@
       (function(){
         const img = document.querySelector('.thisisafirstimage');
         if (!img) return;
-        // アニメ終了後に要素を完全に取り除く
+
+        // タッチスクロール防止用ハンドラ（iOS 対策）
+        function preventTouch(e){ e.preventDefault(); }
+
+        // スクロール禁止を有効にする
+        function enableNoScroll(){
+          document.documentElement.classList.add('no-scroll');
+          document.body.classList.add('no-scroll');
+          document.addEventListener('touchmove', preventTouch, { passive: false });
+        }
+
+        // スクロール禁止を解除する
+        function disableNoScroll(){
+          document.documentElement.classList.remove('no-scroll');
+          document.body.classList.remove('no-scroll');
+          document.removeEventListener('touchmove', preventTouch, { passive: false });
+        }
+
+        // アニメーションの最中はスクロール禁止にする（確実性のため即時有効化）
+        enableNoScroll();
+
+        // アニメーション終了で要素を削除してスクロールを戻す
         img.addEventListener('animationend', () => {
+          disableNoScroll();
           img.remove();
         }, { once: true });
+
+        // 万が一アニメーションが発火しない環境のためのフォールバック（任意）
+        setTimeout(() => {
+          if (document.documentElement.classList.contains('no-scroll')) {
+            disableNoScroll();
+          }
+        }, 6000); // アニメーション時間より少し長めに
       })();
     </script>
 
