@@ -15,9 +15,11 @@
 @keyframes firstbody{
   from{
     overflow:hidden;
+    opacity:0;
   }
   to{
     overflow:visible;
+    opacity:1;
   }
 }
 
@@ -33,7 +35,7 @@
   animation:thisisafirstimage 2.5s;
 }
 
-body{
+body:not(.thisisafirstimage){
   animation:firstbody 2.5s;
 }
 
